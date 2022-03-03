@@ -1,22 +1,21 @@
 # SpringBoot_Assignment
-This is the code packet for Speing boot assignment in which I have build a rest api.
-This application is deployed on aws elastic bean stalk and below is the home yrl:-
-http://springbootrestapi-env.eba-gsemta55.us-east-2.elasticbeanstalk.com/api/hello/
+This code implements rest api using spring boot framework. This rest api uses H2 as it's backend database. 
+Following table structure is used for the same: -
+id (auto increment)
+name (string)
+price (string)
+available (boolean)
 
-Below are the url for for GET and POST requests:-
-http://springbootrestapi-env.eba-gsemta55.us-east-2.elasticbeanstalk.com/api/hotels/
+1) Below is the home page for the app which prints "Hello Canada"
+http://localhost:8080/api/hello
 
-Also, below is the sample post request:-
+2) Below is the GET request url to fetch all the hotels from backend database
+http://localhost:8080/api/hotels/
+
+3)Below is the sample POST request and url is same as GET request:-
 {
 	"name":"Marriot",
 	"price":"160.00",
 	"available":false
 }
-
-This data gets stored in a database tables which has the following structure:-
-id - Primary key (Auto generated)
-name - String
-price - String
-available - boolean
-
-H2 Database is used for this application which is the default database for springboot.
+This will create entry for this hotel in the backend table, which can then be viewed using GET request
